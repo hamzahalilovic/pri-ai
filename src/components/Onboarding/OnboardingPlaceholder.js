@@ -6,8 +6,23 @@ const Illustration = "/assets/Illustration.svg";
 
 const OnboardingPlaceholder = ({ logIn, openDemo }) => {
   return (
-    <>
-      <Box style={{ width: "220px", height: "160px" }}>
+    <Box
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Box
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <NextImage
           src={Illustration}
           alt="Illustration"
@@ -16,9 +31,9 @@ const OnboardingPlaceholder = ({ logIn, openDemo }) => {
         />
       </Box>
       <Text as="b" fontSize="lg">
-        Finish Setting up your AI
+        Finish Setting up your AIs
       </Text>
-      <Text maxWidth={"38%"} color="#475467">
+      <Text color="#475467">
         To work properly your AI needs to know more about you. Complete the
         onboarding to continue.
       </Text>
@@ -52,6 +67,7 @@ const OnboardingPlaceholder = ({ logIn, openDemo }) => {
         <Text
           marginTop={"10px"}
           cursor={"pointer"}
+          color="#0E9384"
           onClick={() => {
             window
               .open("https://beta.prifina.com/pri-ai.html", "_blank")
@@ -61,7 +77,7 @@ const OnboardingPlaceholder = ({ logIn, openDemo }) => {
           About Pri-AI
         </Text>
       </div>
-    </>
+    </Box>
   );
 };
 

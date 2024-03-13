@@ -118,7 +118,7 @@ export default function Personalize(props) {
 
   return (
     <>
-      <Flex flexDirection={"column"}>
+      <Flex flexDirection={"column"} paddingTop={10}>
         <Box marginLeft={"10px"} marginTop={"15px"}>
           <Box
             width={"48px"}

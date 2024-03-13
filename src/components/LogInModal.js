@@ -480,8 +480,17 @@ export default function LoginModal({ isOpen, onClose, onOpen, logInSuccess }) {
         minHeight={{ base: "100%", md: "800px" }}
         marginTop={"auto"}
         marginBottom={"auto"}
+        paddingLeft={"0px"}
+        paddingRight={"0px"}
+        paddingTop={"90px"}
+        paddingBottom={"0px"}
       >
         <ModalCloseButton
+          style={{
+            position: "absolute",
+            top: 50,
+            right: 20,
+          }}
           onClick={() => {
             onClose();
           }}
@@ -503,27 +512,34 @@ export default function LoginModal({ isOpen, onClose, onOpen, logInSuccess }) {
               marginLeft={{ base: "10px", md: "400px" }}
               marginRight={{ base: "10px", md: "400px" }}
             >
-              <NextImage
-                src={dataCloudIcon}
-                alt={`Settings Button`}
-                width={150}
-                height={150}
-              />
-              <HeadingText
-                text={
-                  screen === screens.signup
-                    ? `Create your DataCloud account`
-                    : `Log in with DataCloud account`
-                }
-              />
-              <SubtitleText
-                text={
-                  screen === screens.signup
-                    ? ` To create a new account please download FreeOTP Authenticator app
+              <Box marginBottom={15}>
+                <NextImage
+                  src={dataCloudIcon}
+                  alt={`Settings Button`}
+                  width={150}
+                  height={150}
+                />
+              </Box>
+              <Box marginBottom={15}>
+                <HeadingText
+                  text={
+                    screen === screens.signup
+                      ? `Create your DataCloud account`
+                      : `Log in with DataCloud account`
+                  }
+                />
+              </Box>
+              <Box marginBottom={15}>
+                <SubtitleText
+                  text={
+                    screen === screens.signup
+                      ? ` To create a new account please download FreeOTP Authenticator app
               on your mobile device. Available on both App store and Google play`
-                    : `Keep your phone ready for two-factor authentication.`
-                }
-              />
+                      : `Keep your phone ready for two-factor authentication.`
+                  }
+                />
+              </Box>
+
               <Text alignSelf={"flex-start"}>Username: </Text>
               <Input
                 borderColor={error !== "" ? "#dc3545" : "#ced4da"}
@@ -543,14 +559,13 @@ export default function LoginModal({ isOpen, onClose, onOpen, logInSuccess }) {
                     ? "visible"
                     : "hidden"
                 }
-                alignSelf={"flex-start"}
                 style={{ color: error !== "" ? "red" : "black" }}
               >
                 {error === ""
                   ? "Username can contain letters and numbers"
                   : error}
               </Text>
-              <Box alignSelf={"flex-end"} marginBottom={"50px"}>
+              <Box marginBottom={"50px"}>
                 {screen === screens.signup ? (
                   <Text3
                     main={"Already have an account?"}

@@ -44,8 +44,9 @@ export default function Sidebar(props) {
       minHeight={{ base: "100%", md: "100vh" }}
       maxHeight={{ base: "100%", md: "100vh" }}
       borderRight={{ base: "", md: "1px solid #eaecf0" }}
-      paddingLeft={4}
-      paddingRight={4}
+      paddingTop={50}
+      paddingLeft={2}
+      paddingRight={2}
     >
       {/* <LogoHeader /> */}
       <Text paddingTop={"15px"} paddingRight={"5px"}>

@@ -10,10 +10,10 @@ import {
   useRef,
   useState,
 } from "react";
-const {
-  DynamoDBClient,
-  ListTablesCommand,
-} = require("@aws-sdk/client-dynamodb");
+// const {
+//   DynamoDBClient,
+//   ListTablesCommand,
+// } = require("@aws-sdk/client-dynamodb");
 
 import About from "./About";
 import ChatPrompt from "./ChatPrompt";
@@ -1219,12 +1219,21 @@ The full details on the abilities of Pri-AI can be found here in the help sheet.
 
   return (
     <>
-      <div style={{ margin: "" }}>
+      <div
+        style={{
+          height: "100vh",
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          paddingTop: 40,
+          // paddingBottom: 80,
+        }}
+      >
         <DataContext.Provider
           value={{ agents, setAgents, buddies, setBuddies }}
         >
           <Flex flexDirection={"row"}>
-            <Flex
+            {/* <Flex
               height={"100vh"}
               width={"100px"}
               flexDirection={"column"}
@@ -1282,7 +1291,7 @@ The full details on the abilities of Pri-AI can be found here in the help sheet.
                   </>
                 )}
               </Button>
-            </Flex>
+            </Flex> */}
             <Box width={"100%"}>
               {onboarding ? (
                 <>
@@ -1357,7 +1366,13 @@ The full details on the abilities of Pri-AI can be found here in the help sheet.
               >
                 <DrawerOverlay />
                 <DrawerContent width={"85%"} padding={"16px"}>
-                  <DrawerCloseButton />
+                  <DrawerCloseButton
+                    style={{
+                      position: "absolute",
+                      top: 50,
+                      right: 20,
+                    }}
+                  />
                   <Sidebar
                     isLargerThanMD={isLargerThanMD}
                     loggedIn={loggedIn}

@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // output: "export",
+
   images: {
     domains: [
       `${process.env.AWS_IMAGES_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com`,
@@ -19,6 +21,9 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
+    images: {
+      unoptimized: true,
+    },
   },
 };
 

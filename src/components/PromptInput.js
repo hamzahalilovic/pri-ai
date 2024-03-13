@@ -72,6 +72,7 @@ function PromptInput(props) {
       borderTop={"2px solid #eeeff2"}
       minWidth="max-content"
       alignItems="center"
+      marginBottom={12}
       // flex={1}
     >
       <Box

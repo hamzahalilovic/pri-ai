@@ -75,6 +75,11 @@ export default function ChatResponse(props) {
           padding={"35px"}
         >
           <ModalCloseButton
+            style={{
+              position: "absolute",
+              top: 50,
+              right: 20,
+            }}
             onClick={() => {
               onFeedbackClose();
             }}

@@ -47,6 +47,11 @@ export default function OnboardingModal(props) {
         marginBottom={"auto"}
       >
         <ModalCloseButton
+          style={{
+            position: "absolute",
+            top: 50,
+            right: 20,
+          }}
           onClick={() => {
             setOnboardingStep(0);
             props.onClose();

@@ -1,0 +1,10 @@
+{
+  "appId": "com.example.app",
+  "appName": "personal-ai",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https",
+
+    "cleartext": true
+  }
+}

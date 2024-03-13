@@ -108,6 +108,11 @@ export default function UploadModal({ isOpen, onClose, userID, index }) {
         marginBottom={"auto"}
       >
         <ModalCloseButton
+          style={{
+            position: "absolute",
+            top: 50,
+            right: 20,
+          }}
           onClick={() => {
             onClose();
           }}
